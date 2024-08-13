@@ -6,7 +6,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name="address")
-public class Address {
+public class Address 
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,38 +17,46 @@ public class Address {
 
     public Address() {}
 
-    public Address(Long id, String street, String city) {
+    public Address(Long id, String street, String city) 
+    {
         this.id = id;
         this.street = street;
         this.city = city;
     }
 
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Long id)
+    {
         this.id = id;
     }
 
-    public String getStreet() {
+    public String getStreet() 
+    {
         return street;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(String street) 
+    {
         this.street = street;
     }
 
-    public String getCity() {
+    public String getCity() 
+    {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(String city)
+    {
         this.city = city;
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) 
+    {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Address address = (Address) o;
@@ -55,7 +64,8 @@ public class Address {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() 
+    {
         return Objects.hash(id);
     }
 }
